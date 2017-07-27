@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .col-xs-offset-1{
 	text-align: center;
 	position: relative;
@@ -12,4 +13,259 @@
 
 	line-height: 60px;
 	
+=======
+html{
+	min-height: 100%;
+	position: relative;
+}
+body{
+	width: 100%;
+	margin: 0 0 100px; /* bottom = footer height */
+	font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif; 
+	color: #000;
+}
+/*div{
+	border: red solid 1px;
+}
+*/
+.col-lg-12{
+	padding:0px !important;	
+}
+.top{
+	width: 100%;
+	height: 348px;
+	background-color: #fff;	
+	background-image: url("../images/Employee-DManagementS.png");
+	font-family: "Georgia", Times, Times New Roman, serif;
+}
+.header-container{
+	width: 100%;
+	min-height: 90px;
+	margin: 0 auto;		
+	background-color: #fff;	
+	background-image: url("../imagesEmployee-DManagementS.png");	
+	font-family: "Georgia", Times, Times New Roman, serif;
+	overflow: auto;
+}
+.main-container{
+	width: 100%;
+	margin: 0 auto;		
+	font-family: "Georgia", Times, Times New Roman, serif;
+	overflow: auto;
+}
+.container{
+	max-width:1170px;
+}
+.logo{
+	width: 250px;
+	margin-top: 25px;
+	background-color: #4aaaa5;
+	float: left;
+	text-align: center;
+	display: table-cell;
+	font-family: "Georgia", Times, Times New Roman, serif;
+	color: #fff;
+}
+h1{
+	margin-top: 12px;
+	display: block;
+    font-size: 2em;
+    font-weight: bold;	
+}
+.nav-bar{
+	padding-top: 40px;	
+	background-color: #fff;
+	float: right;
+}
+ul{
+	padding: 0;
+	margin: 20px 0;
+	font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif; 
+}
+ul li a, ul li a:visited{
+	text-decoration: none;
+	color: #777;
+}
+ul li a:hover{
+	text-decoration: underline;
+}
+li {
+	display: inline-block;
+}
+li.side-nav, li.center-nav{
+	padding: 0 10px;
+}
+
+.center-nav{
+	border-left: #ccc solid 1px;
+	border-right: #ccc solid 1px;
+}
+.title{
+	font-family: "Georgia", Times, Times New Roman, serif;
+	color: #4aaaa5;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+hr{
+	border: #ccc solid 2px;
+	margin: 20px 0;
+
+}
+
+.main-section{
+	margin-top: 30px;	
+	padding: 30px;
+	background-color: #fff;		
+	width:650px;
+	border: #ddd solid 1px;
+	}
+.main-image{
+	width:200px;
+	margin: 0 20px 0 0;
+	float: left;
+}
+li .icon-image{
+	width: 50px;
+	padding-right: 15px;
+}
+
+.sidebar-section{
+	background-color: #ffffff;
+	margin: 30px 0 10px 28px;		
+	padding: 20px;
+	border: #ddd solid 1px;
+	}
+
+
+
+footer{
+	width: 100%;
+	height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;		
+	background-color: #666;
+	border-top: #4aaaa5 solid 10px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+}
+.section-footer{
+	padding-top: 30px
+}
+p{
+	line-height: 25px;
+	margin: 20px 0;
+	display: block;
+}
+input {
+    width: 100%;
+    height: 25px;
+    margin: 12px 0;
+}
+label{
+}
+.form-labels{
+	margin: 10px 0 0;
+}
+.message-box{
+	margin-top: 12px;
+}
+.message{
+	width: 100%;
+}
+.submit-btn{
+	margin: 14px 0;
+	background-color: #4aaaa5;
+	width: 130px;
+	height: 50px;
+}
+.submit-text {
+	padding: 16px 0;
+	text-align: center;
+}
+a.submit-text-link:link {
+	color: #fff;
+	text-decoration: none;
+}
+.port-rows{
+	max-width:590px;
+	margin-bottom: 30px;	
+	overflow: auto;
+}
+.port-box-left{
+	width:270px;
+	position: relative;
+	height: 203px;
+	margin: 0 20px 0 0;
+	float: left;
+}
+.port-box-right{
+	width:270px;
+	position: relative;
+	height: 203px;
+	margin: 0;
+	float: left;
+}
+.port-box-label { 
+  	position:absolute;
+	font-family: "Georgia", Times, Times New Roman, serif;
+  	bottom:0;
+  	background-color:#4aaaa5;
+  	width:100%;
+  	text-align:center;
+  	color: #fff;
+  	height: 30px;
+  	line-height: 30px;
+}
+p.port-box-label{
+	margin-bottom: 6px;
+}
+
+@media only screen and (max-width: 960px) {
+	.sidebar-section{	
+	margin: 30px 0px 100px 0px;	
+}
+
+li .icon-image{
+	width: 50px;
+	padding-right: 15px;
+}
+.port-images{
+	max-width:270px;
+}
+
+}
+@media only screen and (max-width: 768px) {
+.nav-bar{
+	padding-top: 20px;		
+	text-align: center;
+}
+.logo{
+	margin-top: 0;
+}
+.sidebar-section{
+	margin: 30px 0 40px 0px;
+	}	
+footer{
+	height: 50px;
+	}	
+.section-footer{
+	padding-top: 10px
+}
+
+}
+
+@media only screen and (max-width: 640px) {
+.nav-bar{
+	padding-top: 20px;		
+	text-align: center;
+}
+.sidebar-section{
+	margin: 30px 0 40px 0px;	
+}
+
+
+>>>>>>> 04900746ba3ac6b078fa7177d6e6bf0fd5e9e723
 }
