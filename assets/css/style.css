@@ -1,23 +1,19 @@
-<<<<<<< HEAD
-.col-xs-offset-1{
-	text-align: center;
-	position: relative;
-	line-height: 40px;
-	border: solid;
-	
+/*<<<<<<< HEAD */
 
-
-}
 
 .col-xs-offset-1 h1{
 
 	line-height: 60px;
 	
-=======
+	}
+
+
 html{
 	min-height: 100%;
 	position: relative;
 }
+
+
 body{
 	width: 100%;
 	margin: 0 0 100px; /* bottom = footer height */
@@ -137,6 +133,53 @@ li .icon-image{
 	border: #ddd solid 1px;
 	}
 
+/*.col-xs-offset-1 table{
+
+	width: 100%;
+	border: solid black;
+}
+*/
+
+.row columns-top, .col-xs-offset-1, table{
+
+	width: 90%;
+
+}
+
+table{
+
+	border: solid black 1px;
+	width: 100%;
+
+	padding: 5px;
+	margin: 10px;
+}
+
+th{
+
+	margin: 10px;
+	padding: 10px;
+}
+
+td{
+	margin: 5px;
+	padding: 10px;
+
+}
+
+#employeeRole, #employeeStart, #employeeName, #employeeRate  {
+	width: 30%;
+	margin: 10px;
+
+
+
+}
+
+#addEmployeeButton{
+	width:20%;
+	text-align: center;
+}
+
 
 
 footer{
@@ -222,6 +265,7 @@ a.submit-text-link:link {
 p.port-box-label{
 	margin-bottom: 6px;
 }
+
 
 @media only screen and (max-width: 960px) {
 	.sidebar-section{	
