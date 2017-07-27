@@ -12,20 +12,55 @@
 </head>
 
 <div class="container main">
-    <div class="row">
+    <div class="row top">
         <div class="col-xs-offset-1 col-xs-10">
-            <h1>Employee Data</h1>
+            <h1></h1>
 
+        </div>
+    </div>
+    <div class="row columns-top">
+        <div class="col-xs-offset-1 col-xs-10">
+<table>
+    <tr>
+    <th>Employee Name</th><th>Role</th><th>Start Date</th><th>Months Worked</th><th>Monthly Rate $</th><th>Total Billed $</th>
+    </tr>
+</table>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
+<table>
+    <tr>
+    <th>Add Employee</th>
+    </tr>
+<table>
+    <tr>
+    <td>
+    Employee Name:<br>
+        <input type="text" id="employeeName" name="">
+    </td>
+    </tr>
+   <tr>
+    <td>
+    Role:<br>
+        <input type="text" id="employeeRole" name="">
+    </td>
+</tr>
+   <tr>
+    <td>
+    Start Date (DD/MM/YY - ex 01/02/17):<br>
+        <input type="text" id="employeeStart" name="">
+    </td>
+</tr>
+     <tr>
+    <td>
+    Monthly Rate<br>
+        <input type="text" id="employeeRate" name="">
+    </td>
+</tr> 
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-offset-1 col-xs-10">
-
+</table>
+<input type="submit" id="addemployee" name=""> 
         </div>
     </div>
 
