@@ -1,0 +1,15 @@
+.col-xs-offset-1{
+	text-align: center;
+	position: relative;
+	line-height: 40px;
+	border: solid;
+	
+
+
+}
+
+.col-xs-offset-1 h1{
+
+	line-height: 60px;
+	
+}
