@@ -16,7 +16,12 @@ $('#addEmployeeButton').click(function (event) {
         rate: $('#employeeRate').val().trim()
     }
 
-    db.ref('/employees').push(employee);
+    if (employee.name && employee.role && employee.start && employee.rate !== '') {
+
+        db.ref('/employees').push(employee);
+    } else {
+        alert('Please enter new employee information.')
+    }
 
     $('#employeeName').val('')
     $('#employeeRole').val('')
@@ -54,16 +59,14 @@ db.ref('/employees').on('child_added', function (employee) {
 
     var totalBilled = (monthsWorked * employee.rate);
 
-    console.log(totalBilled);
-
     var name = $('<td></td>').append(employee.name);
     var role = $('<td></td>').append(employee.role);
     var start = $('<td></td>').append(employee.start);
     var worked = $('<td></td>').append(monthsWorked);
-    var rate = $('<td></td>').append(employee.rate);
+    var rate = $('<td></td>').append('$' + parseInt(employee.rate).toLocaleString({ style: 'currency', currency: 'USD' }));
     var billed = $('<td></td>').append('$' + parseInt(totalBilled).toLocaleString({ style: 'currency', currency: 'USD' }));
 
-    var employeeRow = employeeTable.row.attr('id', key + 'EmployeeRow');
+    var employeeRow = $('<tr></tr>').attr('id', key + 'EmployeeRow');
 
     employeeRow.append(name)
         .append(role)
