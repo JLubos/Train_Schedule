@@ -1,14 +1,15 @@
+// define shortcut var for database
 var db = firebase.database();
 
-var employeeTable = {
-    table: $('#employeeTable'),
-    row: $('<tr></tr>'),
-    cell: $('<th></th>')
-}
+// define shortcut for employee table HTML element
+var employeeTable = $('#employeeTable');
 
+// on click of new employee form submit button...
 $('#addEmployeeButton').click(function (event) {
+    // stop page from reloading
     event.preventDefault();
 
+    // define employee object with info from form input fields
     var employee = {
         name: $('#employeeName').val().trim(),
         role: $('#employeeRole').val().trim(),
@@ -16,27 +17,29 @@ $('#addEmployeeButton').click(function (event) {
         rate: $('#employeeRate').val().trim()
     }
 
+    // if fields are not empty...
     if (employee.name && employee.role && employee.start && employee.rate !== '') {
-
+        // push the new employee's info to the employees "table" in the database
         db.ref('/employees').push(employee);
     } else {
+        // alert the user if form input fields are empty
         alert('Please enter new employee information.')
     }
 
+    // reset form input fields
     $('#employeeName').val('')
     $('#employeeRole').val('')
     $('#employeeStart').val('')
     $('#employeeRate').val('')
 });
 
-// var currentMonth = new Date(year, month);
-
-
+// define function to convert string date to javascript date
 function toDate(dateStr) {
     var parts = dateStr.split("/");
     return new Date(parts[2], parts[0] - 1, parts[1]);
 }
 
+// define function to subtract the # of months employee's start date from current date
 function monthDiff(d1, d2) {
     var months;
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
@@ -46,8 +49,7 @@ function monthDiff(d1, d2) {
 }
 
 db.ref('/employees').on('child_added', function (employee) {
-
-
+    
     var currentDate = new Date();
 
     var employee = employee.toJSON();
@@ -75,5 +77,5 @@ db.ref('/employees').on('child_added', function (employee) {
         .append(rate)
         .append(billed);
 
-    employeeTable.table.append(employeeRow);
+    employeeTable.append(employeeRow);
 })
