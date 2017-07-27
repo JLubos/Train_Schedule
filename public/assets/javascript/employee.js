@@ -49,18 +49,26 @@ function monthDiff(d1, d2) {
 }
 
 db.ref('/employees').on('child_added', function (employee) {
-    
+
+    // define variable for new date subtract employee start date from
     var currentDate = new Date();
 
+    // convert employee firebase object to JSON
     var employee = employee.toJSON();
+
+    // define variable for employee object key to add to table row id
     var key = employee.key;
 
+    // convert the employee's start date to javascript date format
     var startDate = toDate(employee.start);
 
+    // subtract start date from current date to get # of months worked
     var monthsWorked = monthDiff(startDate, currentDate);
 
+    // define variable for the total the employee has billed
     var totalBilled = (monthsWorked * employee.rate);
 
+    // append the employee's info to table cells
     var name = $('<td></td>').append(employee.name);
     var role = $('<td></td>').append(employee.role);
     var start = $('<td></td>').append(employee.start);
@@ -68,8 +76,10 @@ db.ref('/employees').on('child_added', function (employee) {
     var rate = $('<td></td>').append('$' + parseInt(employee.rate).toLocaleString({ style: 'currency', currency: 'USD' }));
     var billed = $('<td></td>').append('$' + parseInt(totalBilled).toLocaleString({ style: 'currency', currency: 'USD' }));
 
+    // define an html table row element with the employee database object key as the id
     var employeeRow = $('<tr></tr>').attr('id', key + 'EmployeeRow');
 
+    // append the employee info cells to the table row
     employeeRow.append(name)
         .append(role)
         .append(start)
@@ -77,5 +87,6 @@ db.ref('/employees').on('child_added', function (employee) {
         .append(rate)
         .append(billed);
 
+    // append the new employee row to the employees table
     employeeTable.append(employeeRow);
 })
